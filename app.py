@@ -9,23 +9,17 @@ app = Flask(__name__)
 def index():
     context = {
         'questions': [{'id': '1', 'title': '这是第一个标题', 'content': '这里是第一个标题的内容',
-                       'create_time': '2018-05-30 14:03:00',
-                       'author_id': '1', 'author': '代永强'},
+                       'create_time': '2018-05-30 14:03:00', 'author': {'author_id': '1', 'username': '代永强'}},
                       {'id': '2', 'title': '这是第二个标题', 'content': '这里是第二个标题的内容',
-                       'create_time': '2018-05-30 14:32:14',
-                       'author_id': '1', 'author': '代永强'},
+                       'create_time': '2018-05-30 14:32:14', 'author': {'author_id': '2', 'username': '徐佳敏'}},
                       {'id': '3', 'title': '这是第三个标题', 'content': '这里是第三个标题的内容',
-                       'create_time': '2018-05-30 14:33:47',
-                       'author_id': '1', 'author': '代永强'},
+                       'create_time': '2018-05-30 14:33:47', 'author': {'author_id': '1', 'username': '代永强'}},
                       {'id': '4', 'title': '这是第四个标题', 'content': '这里是第四个标题的内容',
-                       'create_time': '2018-05-30 14:40:11',
-                       'author_id': '1', 'author': '代永强'},
+                       'create_time': '2018-05-30 14:40:11', 'author': {'author_id': '3', 'username': '张亚平'}},
                       {'id': '5', 'title': '这是第五个标题', 'content': '这里是第五个标题的内容',
-                       'create_time': '2018-05-30 14:42:19',
-                       'author_id': '1', 'author': '代永强'},
+                       'create_time': '2018-05-30 14:42:19', 'author': {'author_id': '1', 'username': '代永强'}},
                       {'id': '6', 'title': '这是第六个标题', 'content': '这里是第六个标题的内容',
-                       'create_time': '2018-05-30 14:51:25',
-                       'author_id': '1', 'author': '代永强'}
+                       'create_time': '2018-05-30 14:51:25', 'author': {'author_id': '1', 'username': '代永强'}}
                       ]
     }
     return render_template('index.html', **context)
